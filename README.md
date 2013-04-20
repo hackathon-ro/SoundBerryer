@@ -26,3 +26,10 @@ Install:
 
 Note:
 In order to access the web interface you need to edit /etc/vlc/lua/http/.hosts and uncomment the last 2 lines. Please keep in mind that by doing this anyone can access the web interface, change your song and explore the files on your raspberry pi.
+
+
+Thanks
+-------
+
+http://www.icrobotics.co.uk/wiki/index.php/Turning_the_Raspberry_Pi_Into_an_FM_Transmitter
+

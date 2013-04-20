@@ -2,6 +2,9 @@
 //  wget -O - http://beta.etherpad.org/p/pihackfm/export/txt 2>/dev/null | gcc -lm -std=c99 -g -xc - && ./a.out beatles.wav
 // Access from ARM Running Linux
 
+/*
+Credit goes to the guys at: http://www.icrobotics.co.uk/wiki/index.php/Turning_the_Raspberry_Pi_Into_an_FM_Transmitter 
+*/
 
 #include <stdio.h>
 #include <string.h>
@@ -210,7 +213,6 @@ void playWav(char* filename, float samplerate)
     while (read(fp, &data, 2)) {
         float fmconstant = samplerate * 50.0e-6;  // for pre-emphisis filter.  50us time constant
         int clocksPerSample = 22500.0/samplerate*1400.0;  // for timing
-//        int clocksPerSample = 44100.0/samplerate*1400.0;  // for timing
 
         datanew = (float)(data)/32767;
         
