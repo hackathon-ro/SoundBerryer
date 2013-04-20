@@ -207,7 +207,6 @@ void playWav(char* filename, float samplerate)
     for (int i=0; i<22; i++)
        read(fp, &data, 2);  // read past header
     
-    int i = 0;
     while (read(fp, &data, 2)) {
         float fmconstant = samplerate * 50.0e-6;  // for pre-emphisis filter.  50us time constant
         int clocksPerSample = 22500.0/samplerate*1400.0;  // for timing
@@ -281,7 +280,7 @@ void setupDMA( float centerFreq ){
      // make copy instructions
      struct CB* instr0= (struct CB*)instrPage.v;
      
-     for (int i=0; i<4096/sizeof(struct CB); i++) {
+     for (unsigned i=0; i<4096/sizeof(struct CB); i++) {
        instrs[instrCnt].v = (void*)((int)instrPage.v + sizeof(struct CB)*i);
        instrs[instrCnt].p = (void*)((int)instrPage.p + sizeof(struct CB)*i);
        instr0->SOURCE_AD = (unsigned int)constPage.p+2048;
