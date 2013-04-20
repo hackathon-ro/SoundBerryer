@@ -8,7 +8,7 @@
 # Note: playlist is in xspf format
 
 LOCATION=/radio/store
-PLAYLIST_FILE=playlist.xspf
+PLAYLIST_FILE=/radio/playlist.xspf
 
 cat > $PLAYLIST_FILE << EOL
 <?xml version="1.0" encoding="UTF-8"?>

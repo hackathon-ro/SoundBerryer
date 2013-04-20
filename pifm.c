@@ -210,6 +210,7 @@ void playWav(char* filename, float samplerate)
     while (read(fp, &data, 2)) {
         float fmconstant = samplerate * 50.0e-6;  // for pre-emphisis filter.  50us time constant
         int clocksPerSample = 22500.0/samplerate*1400.0;  // for timing
+//        int clocksPerSample = 44100.0/samplerate*1400.0;  // for timing
 
         datanew = (float)(data)/32767;
         
