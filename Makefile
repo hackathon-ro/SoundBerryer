@@ -1,4 +1,4 @@
-CFLAGS:= -lm -std=c99 -Wall -Wextra
+CFLAGS:= -lm -std=c99 -Wall -Wextra -O3
 CC=gcc
 
 .PHONY: all clean
